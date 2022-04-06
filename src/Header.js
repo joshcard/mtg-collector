@@ -2,9 +2,9 @@ import React from 'react'
 
 function Header() {
   return (
-    <>
-        <h3>Header</h3>
-    </>
+    <div>
+      <h3>MTG Collector</h3>
+    </div>
   )
 }
 

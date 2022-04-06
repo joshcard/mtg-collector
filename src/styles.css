@@ -1,8 +1,5 @@
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  border: gray;
-  border-width: 3px;
+body {
+  background-color: antiquewhite;
 }
 
 .card {
@@ -12,11 +9,31 @@
   border: white;
 }
 
+.cardCollection {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  border: white;
+  background-color: antiquewhite;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  border: gray;
+  border-width: 3px;
+  background-color: antiquewhite;
+}
+
 .centerFloat {
   margin: auto;
   width: 70%;
   border: 5px solid #ffff00;
   padding: 10px;
+}
+
+.details {
+  padding-left: 10px;
 }
 
 .exactCenter {
@@ -29,6 +46,7 @@
   margin-top: -100px;
   margin-left: -100px;
 }
+
 
 .trying {
   position: absolute;

@@ -19,8 +19,22 @@ function Options({cardOptions, updateCardCollection, updateCardOptions}) {
         }, [ref]);
       }
     
-      const optionsRef = useRef(null);
-      useOutsideAlerter(optionsRef);
+    const optionsRef = useRef(null);
+    useOutsideAlerter(optionsRef);
+
+    const checkStringLength = (string) => {
+        if (string.length > 15) {
+            string = string.substring(0,15) + "..."
+            return string
+        } else {
+            return string
+        }
+    }
+
+    cardOptions.forEach((card)=> {
+        card.shortName = checkStringLength(card.name);
+        card.setName = checkStringLength(card.setName);
+    })
 
   return (
     <>
@@ -28,17 +42,19 @@ function Options({cardOptions, updateCardCollection, updateCardOptions}) {
             {cardOptions.map((card, index)=>{
                 if (card.imageUrl !== undefined) {
                     return <div className='card' key={index}>
-                        <img src={card.imageUrl} alt="mtg card"></img>
+                        <img src={card.imageUrl} height="311" width="226" alt="mtg card"></img>
+                        <span><b>Name:</b> {card.shortName}</span>
                         <span><b>Set:</b> {card.setName}</span>
                         <button className='btn btn-primary' onClick={() => updateCardCollection(card)}>Add to Collection</button>
                     </div>
-                } else {
-                    return <div className='card' key={index}>
+                } else  {
+                    return <div key={index} className="card">
                         <img src={cardBack} height="311" width="226" alt="back of mtg card"></img>
+                        <span><b>Name:</b> {card.shortName}</span>
                         <span><b>Set:</b> {card.setName}</span>
                         <button className='btn btn-primary' onClick={() => updateCardCollection(card)}>Add to Collection</button>
                     </div>
-                }
+                } 
             })}
 
         </div>
