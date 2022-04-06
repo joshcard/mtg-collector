@@ -1,0 +1,40 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  border: gray;
+  border-width: 3px;
+}
+
+.card {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  border: white;
+}
+
+.centerFloat {
+  margin: auto;
+  width: 70%;
+  border: 5px solid #ffff00;
+  padding: 10px;
+}
+
+.exactCenter {
+  width: 70%;
+  height: 90%;
+  position: fixed;
+  background-color: #00ff00;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+.trying {
+  position: absolute;
+  top: 5em;
+  left: 5em;
+  right: 5em;
+  bottom: 5em;
+  overflow: auto;
+}
