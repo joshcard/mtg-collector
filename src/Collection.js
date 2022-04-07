@@ -1,7 +1,7 @@
 import React from 'react'
 import cardBack from './cardBack.png'
 
-function Collection({cardCollection, removeCard, updateDetails}) {
+function Collection({cardCollection, removeCard, updateDetails, filter, updateFilter}) {
 
     const checkStringLength = (string) => {
         if (string.length > 15) {
@@ -17,11 +17,24 @@ function Collection({cardCollection, removeCard, updateDetails}) {
         card.setName = checkStringLength(card.setName);
     })
 
-
-
   return (
     <>
-        <p>COLLECTION:</p>
+        <div className='titleFilter'>
+           <h3>COLLECTION:</h3> 
+           <div className='input-group mb-3'>
+                    <div className="input-group-prepend right">
+                        <label className="input-group-text" htmlFor="inputGroupSelect01">Filter By</label>
+                    </div>
+                    <select className="custom-select" id="inputGroupSelect01" value={filter} onChange={updateFilter}>
+                        <option value="">Any</option>
+                        <option value="Creature">Creature</option>
+                        <option value="Enchantment">Enchantment</option>
+                        <option value="Instant">Instant</option>
+                        <option value="Planeswalker">Planeswalker</option>
+                        <option value="Sorcery">Sorcery</option>
+                    </select>
+            </div>
+        </div>
         <div className='cards'>
             {cardCollection.map((card, index)=>{
                 if (card.imageUrl !== undefined) {

@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
   return (
     <div>
-      <h3>MTG Collector</h3>
+      <center><h1>MTG Collector</h1></center>
     </div>
   )
 }

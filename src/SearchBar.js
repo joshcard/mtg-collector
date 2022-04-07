@@ -9,15 +9,10 @@ function SearchBar({updateCardOptions, setCardInput}) {
     }
 
   return (
-    <>
-        <label>
-            Card Name:
-            <input type="text" value={inputValue} onChange={handleChange}></input>
-        </label>
-        
+    <div className='input-group input'>
+        <input type="text" className='form-control rounded' placeholder='Card Name' value={inputValue} onChange={handleChange}></input>
         <button className='btn btn-primary' onClick={() => updateCardOptions(inputValue)}>Search</button>
-    </>
-    
+    </div>
   )
 }
 

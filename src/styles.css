@@ -1,7 +1,3 @@
-body {
-  background-color: antiquewhite;
-}
-
 .card {
   padding-left: 10px;
   padding-right: 10px;
@@ -14,7 +10,7 @@ body {
   padding-right: 10px;
   padding-top: 20px;
   border: white;
-  background-color: antiquewhite;
+  background-color: #E8F1F2;
 }
 
 .cards {
@@ -22,7 +18,11 @@ body {
   flex-wrap: wrap;
   border: gray;
   border-width: 3px;
-  background-color: antiquewhite;
+  background-color: #E8F1F2;
+}
+
+.border {
+  border: 3px solid #a1a3a5!important;
 }
 
 .centerFloat {
@@ -32,8 +32,10 @@ body {
   padding: 10px;
 }
 
-.details {
-  padding-left: 10px;
+.collection {
+  grid-area: collection;
+  background-color: #E8F1F2;
+  overflow: auto;
 }
 
 .exactCenter {
@@ -47,6 +49,33 @@ body {
   margin-left: -100px;
 }
 
+.header {
+  grid-area: header;
+  background-color: #386FA4;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #386FA4;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 8% 15% auto 7%;
+  grid-template-areas:
+    "header"
+    "search"
+    "collection"
+    "footer";
+  width: 100vw;
+  height: 100vh;
+}
+
+.search {
+  grid-area: search;
+  background-color: #E8F1F2;
+}
 
 .trying {
   position: absolute;
@@ -55,4 +84,74 @@ body {
   right: 5em;
   bottom: 5em;
   overflow: auto;
+}
+
+.tryingDetails {
+  position: absolute;
+  top: 5em;
+  left: 15%;
+  right: 15%;
+  bottom: 5em;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "image info"
+}
+
+.image {
+  grid-area: image;
+}
+
+.info {
+  grid-area: info;
+}
+
+.input {
+  top: 30%;
+  max-width: 35%;
+  left: 32.5%
+}
+
+.input-group .btn {
+  z-index: 0;
+}
+
+.input-group .btn:focus {
+  visibility: hidden;
+}
+
+.titleFilter {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+  .tryingDetails {
+    position: absolute;
+    top: 5em;
+    left: 15%;
+    right: 15%;
+    bottom: 5em;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "image"
+      "info";
+  }
+  
+  .image {
+    grid-area: image;
+    height: 404px;
+    width: 293px;
+    position: relative;
+  }
+  
+  .info {
+    grid-area: info;
+    position: relative;
+  }
 }
