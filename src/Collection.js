@@ -20,21 +20,31 @@ function Collection({cardCollection, removeCard, updateDetails, filter, updateFi
   return (
     <>
         <div className='titleFilter'>
-           <h3>COLLECTION:</h3> 
-           <div className='input-group mb-3'>
-                    <div className="input-group-prepend right">
-                        <label className="input-group-text" htmlFor="inputGroupSelect01">Filter By</label>
-                    </div>
-                    <select className="custom-select" id="inputGroupSelect01" value={filter} onChange={updateFilter}>
-                        <option value="">Any</option>
-                        <option value="Creature">Creature</option>
-                        <option value="Enchantment">Enchantment</option>
-                        <option value="Instant">Instant</option>
-                        <option value="Planeswalker">Planeswalker</option>
-                        <option value="Sorcery">Sorcery</option>
-                    </select>
+            <div>
+                <h3>COLLECTION:</h3>
+            </div>
+            <div>
+            <div className='input-group mb-3'>
+                <div className="input-group-prepend">
+                    <label className="input-group-text" htmlFor="inputGroupSelect01">Filter By</label>
+                </div>
+                <select className="custom-select" id="inputGroupSelect01" value={filter} onChange={updateFilter}>
+                    <option value="">Any</option>
+                    <option value="Creature">Creature</option>
+                    <option value="Enchantment">Enchantment</option>
+                    <option value="Instant">Instant</option>
+                    <option value="Planeswalker">Planeswalker</option>
+                    <option value="Sorcery">Sorcery</option>
+                </select>
+            </div>
             </div>
         </div>
+
+
+
+
+
+
         <div className='cards'>
             {cardCollection.map((card, index)=>{
                 if (card.imageUrl !== undefined) {
