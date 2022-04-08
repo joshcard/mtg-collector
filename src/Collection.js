@@ -30,11 +30,13 @@ function Collection({cardCollection, removeCard, updateDetails, filter, updateFi
                 </div>
                 <select className="custom-select" id="inputGroupSelect01" value={filter} onChange={updateFilter}>
                     <option value="">Any</option>
+                    <option value="Artifact">Artifact</option>
                     <option value="Creature">Creature</option>
                     <option value="Enchantment">Enchantment</option>
                     <option value="Instant">Instant</option>
                     <option value="Planeswalker">Planeswalker</option>
                     <option value="Sorcery">Sorcery</option>
+                    
                 </select>
             </div>
             </div>
