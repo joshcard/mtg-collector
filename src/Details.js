@@ -37,6 +37,14 @@ function Options({cardDetails, updateDetails}) {
     cardDetails.flavor = "N/A"
   }
 
+  if (cardDetails.colors === undefined) {
+    cardDetails.colors = "Colorless"
+  } else if (typeof cardDetails.colors === 'string') {
+    cardDetails.colors = "Colorless"
+  } else {
+    cardDetails.colors = cardDetails.colors.join(', ')
+  }
+
   return (
     <>
         <div ref={optionsRef} className='shadow-lg p-3 mb-5 bg-white rounded border border-secondary cards tryingDetails'>
@@ -47,7 +55,7 @@ function Options({cardDetails, updateDetails}) {
                 <p><b>Name: </b>{cardDetails.name}</p>
                 <p><b>Set: </b>{cardDetails.setName}</p>
                 <p><b>Type: </b>{cardDetails.type}</p>
-                <p><b>Colors: </b>{cardDetails.colors.join(', ')}</p>
+                <p><b>Colors: </b>{cardDetails.colors}</p>
                 <p><b>Rarity: </b>{cardDetails.rarity}</p>
                 <p><b>Play Text: </b>{cardDetails.text}</p>
                 <p><b>Flavor Text: </b>{cardDetails.flavor}</p>
