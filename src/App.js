@@ -862,7 +862,6 @@ function App() {
   };
 
   const updateDetails = (card) => {
-    console.log(card)
     setCardDetails(card);
   }
 
