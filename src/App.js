@@ -780,7 +780,60 @@ function App() {
           }
       ],
       "id": "86b98d51-2a52-55a9-b975-745bdc7bfe54"
-  } 
+  },
+  {
+    "name": "Black Lotus",
+    "manaCost": "{0}",
+    "cmc": 0.0,
+    "type": "Artifact",
+    "types": [
+        "Artifact"
+    ],
+    "rarity": "Rare",
+    "set": "2ED",
+    "setName": "Unlimited Edition",
+    "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+    "artist": "Christopher Rush",
+    "number": "233",
+    "layout": "normal",
+    "multiverseid": "600",
+    "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+    "printings": [
+        "2ED",
+        "CED",
+        "CEI",
+        "LEA",
+        "LEB",
+        "OVNT",
+        "PRM",
+        "VMA"
+    ],
+    "originalText": "Adds 3 mana of any single color of your choice to your mana pool, then is discarded. Tapping this artifact can be played as an interrupt.",
+    "originalType": "Mono Artifact",
+    "legalities": [
+        {
+            "format": "Commander",
+            "legality": "Banned"
+        },
+        {
+            "format": "Duel",
+            "legality": "Banned"
+        },
+        {
+            "format": "Legacy",
+            "legality": "Banned"
+        },
+        {
+            "format": "Oldschool",
+            "legality": "Restricted"
+        },
+        {
+            "format": "Vintage",
+            "legality": "Restricted"
+        }
+    ],
+    "id": "e6c9fe58-bc4f-529d-a387-77d61af87de4"
+} 
   ]);
   const [cardOptions, setCardOptions] = useState([]);
   const [cardDetails, setCardDetails] = useState({});

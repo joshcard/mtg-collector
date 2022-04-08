@@ -8,8 +8,8 @@ To leave the card search or details view simply click anywhere outside of those 
 You can also filter your collection by card type.
 The app is not currently connected to a database, but the collection is stored in state.
 The app utilizes media queries to handle different screen sizes.
-You will notice that there are 5 cards in the collection when you first open the app. 
+You will notice that there are 6 cards in the collection when you first open the app. 
 These are so that you can see how the app works without needing to know the names of any magic cards. 
-The 5 cards in the seed data contain one of each kind of card, so you can test each of the filters.
+The 6 cards in the seed data contain one of each kind of card, so you can test the filters.
 
 I hope you enjoy taking at look at MTG Collector!
