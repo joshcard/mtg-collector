@@ -62,7 +62,7 @@
 .mainContainer {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 8% 15% auto 7%;
+  grid-template-rows: 4em 15% auto 3em;
   grid-template-areas:
     "header"
     "search"
@@ -127,6 +127,10 @@
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.white {
+  color: white;
 }
 
 @media only screen and (max-width: 900px) {
